@@ -1,4 +1,6 @@
 import express from "express"
+import mongoose from "mongoose";
+import lessonRouter from "./routes/lessonRouter.js";
 
 const app = express();
 
@@ -10,3 +12,4 @@ app.listen(port, ()=> {
 
 //Midleware
 app.use(express.json())
+app.use("/lesson", lessonRouter)
