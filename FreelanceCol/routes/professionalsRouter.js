@@ -4,19 +4,19 @@ import { createProfessional, deleteProfessional, readProfessional, updateProfess
 const professionalsRouter = express.Router()
 
 professionalsRouter.post("/", (req, res) => {
-    createProfessional(res)
+    createProfessional(req, res)
 })
 
 professionalsRouter.get("/", (req, res) => {
-    readProfessional(res)
+    readProfessional(req, res)
 })
 
 professionalsRouter.patch("/", (req, res) => {
-    updateProfessional(res)
+    updateProfessional(req, res)
 })
 
 professionalsRouter.delete("/", (req, res) => {
-    deleteProfessional(res)
+    deleteProfessional(req, res)
 })
 
 export default professionalsRouter
