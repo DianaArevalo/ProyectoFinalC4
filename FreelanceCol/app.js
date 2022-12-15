@@ -4,13 +4,13 @@ import mongoose from "mongoose";
 
 const app = express();
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 8082
 
 app.listen(port, ()=> {
     console.log("El servidor se esta ejecutando.");
 })
 
-mongoose.connect("mongodb+srv://FreelanceCol:grupo5@freelancecol.pzdp53s.mongodb.net/Freelance-Col?retryWrites=true&w=majority", (err)=>{
+mongoose.connect("mongodb+srv://FreelanceCol:grupo5@freelancecol.pzdp53s.mongodb.net/?retryWrites=true&w=majority", (err)=>{
     if(err){
         console.log(err);
     }else{
