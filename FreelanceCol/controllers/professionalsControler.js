@@ -19,19 +19,57 @@ export async function createProfessional(req, res){
         res.status(400).json(error.message)
         return
     }
-
     res.status(201).json(documento)
 }
 
 
-export function readProfessional(req, res){
-    res.sendStatus(200)
+export async function readProfessional(req, res){
+    
+    const id = req.params.id
+    let documento
+
+    try {
+        documento = await professionalsModel.findOne({"_id":id})
+        
+    } catch (error) {
+        res.status(400).json(error.message)
+        return
+    }
+    res.status(200).json(documento)
 }
 
-export function updateProfessional(req, res){
-    res.sendStatus(200)
+
+export async function updateProfessional(req, res){
+    
+    const id = req.params.id
+    const update = req.body.update
+    let documento
+
+    try {
+        documento = await professionalsModel.updateOne({"_id":id}, update)
+        
+    } catch (error) {
+        res.status(400).json(error.message)
+        return
+    }
+
+    res.status(200).json(documento)
 }
 
-export function deleteProfessional(req, res){
-    res.sendStatus(200)
+
+export async function deleteProfessional(req, res){
+    
+    const id = req.params.id
+    let documento
+
+    try {
+        documento = await professionalsModel.deleteOne({"_id":id})
+        
+    } catch (error) {
+        res.status(400).json(error.message)
+        return
+    }
+
+    res.status(200).json(documento)
+    
 }

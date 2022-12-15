@@ -7,15 +7,15 @@ professionalsRouter.post("/", (req, res) => {
     createProfessional(req, res)
 })
 
-professionalsRouter.get("/", (req, res) => {
+professionalsRouter.get("/:id", (req, res) => {
     readProfessional(req, res)
 })
 
-professionalsRouter.patch("/", (req, res) => {
+professionalsRouter.patch("/:id", (req, res) => {
     updateProfessional(req, res)
 })
 
-professionalsRouter.delete("/", (req, res) => {
+professionalsRouter.delete("/:id", (req, res) => {
     deleteProfessional(req, res)
 })
 
