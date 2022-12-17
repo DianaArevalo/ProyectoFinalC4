@@ -46,7 +46,7 @@ export async function updateProfessional(req, res){
     let documento
 
     try {
-        documento = await professionalsModel.updateOne({"_id":id}, update)
+        documento = await professionalsModel.updateOne({"_id":id}, update, {runValidators: true})
         
     } catch (error) {
         res.status(400).json(error.message)
