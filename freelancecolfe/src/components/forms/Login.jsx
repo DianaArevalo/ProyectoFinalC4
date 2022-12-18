@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { Menu } from './Menu'
+import { Link } from 'react-router-dom';
+import { Menu } from './MenuClient'
+import { Register} from "./Register"
 
 
 export const Login = () => {
@@ -7,6 +9,7 @@ export const Login = () => {
   const [miLogin, setMyLogin] = useState("false");
   const [usu, setUsu] = useState("");
   const [pas, setPas] = useState("");
+  const [reg, setReg] = useState("false")
 
 
   function iniciarSesion(e){
@@ -16,7 +19,7 @@ export const Login = () => {
     if(txtusu.length===0 || txtpas.length===0){
       alert("¡Completa los datos que faltan!")
     }else{
-      if(usu === "admin" && pas==="123"){
+      if(usu === "" && pas===""){
         setMyLogin("true");
         document.getElementById("form_login").style.display = "none";
       }else{
@@ -28,6 +31,7 @@ export const Login = () => {
 
       }
     }
+
 
   }
 
@@ -46,10 +50,16 @@ export const Login = () => {
             <input type="password" id="txtpas" style={{textAlign:"center"}} className="form-control" onChange={(e)=>setPas(e.target.value)}  required/>
         </div><br/>
         <input type="submit"  className="btn btn-primary" value="Login" onClick={ iniciarSesion }/>
+        <p></p>
+        <Link to = "/crear-cuenta"><button type="submit"  className="btn btn-primary" value="Registrese" >Registrese</button></Link>
+        
     </form>
 
       { miLogin === "true" && <Menu usu={usu}/>}
+      { reg === "true" && <Register reg={reg}/>}
 
     </div>
   )
 }
+  
+

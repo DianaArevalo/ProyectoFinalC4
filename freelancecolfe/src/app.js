@@ -10,7 +10,10 @@ export default function App(){
         <Router>
             <Routes>
             <Route exact path="/" element={<Login/>}/>
-               // <Route path = "/crear-cuenta" exact element= {<Register/>}/>
+             <Route path = "/crear-cuenta" element= {<Register/>}/>
+            <Route path = "/perfil" element = {<ProfileClient/>}/>
+             <Route path = "/puntaje" element = {<ScoreClient/>}/>
+             <Route path = "/reservas" element = {<ReservationClient/>}/>
             </Routes>
         </Router>
     );
