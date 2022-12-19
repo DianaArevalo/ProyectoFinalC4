@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import { NavLink } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
-import { SearchCompanies } from './SearchCompanies'
-import { SearchProfessionals } from "./SearchProfessionals"
+import { SearchCompanies } from './SearchCompanies.jsx'
+// import { SearchProfessionals } from "./SearchProfessionals"
 import { Lessons} from "./Lessons"
 
 
@@ -10,14 +11,10 @@ import { Lessons} from "./Lessons"
 
 export const Menu = (props) => {
 
-  const [busp, setBusp ] = useState("");
+  // const [busp, setBusp ] = useState("");
   const [busc, setBusc ] = useState("");
   const [cur, setCur ] = useState("");
-  //const history = useHistory();
-  //const handleClick = () => history("/ProfileClient")
- // const [perf, setPerf] = useState("");
- // const [reserv, setReserv] =useState("");
-  //const [punt, setPunt] = useState("");
+ 
 
   function logout(){
     document.getElementById("caja_menu").style.display = "none";
@@ -72,7 +69,7 @@ export const Menu = (props) => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <NavLink to="/SearchProgrammer" activeClassName="active" onClick={buscarP} >Buscar Programadores</NavLink>
+            {/* <NavLink to="/SearchProgrammer" activeClassName="active" onClick={buscarP} >Buscar Programadores</NavLink> */}
             <NavLink to="/SearchCompany" activeClassName="active" onClick={buscarC} >Buscar Compañias</NavLink>
             <NavLink to="/Lessons" activeClassName="active" onClick={cursos} >Cursos</NavLink>
 
@@ -85,8 +82,8 @@ export const Menu = (props) => {
       </div>
     </nav>
   </div>
-
-  {busp === "1" && <SearchProfessionals/>}
+{/* 
+  {busp === "1" && <SearchProfessionals/>} */}
   {busc === "1" && <SearchCompanies/>}
   {cur === "1" && <Lessons/>}
   

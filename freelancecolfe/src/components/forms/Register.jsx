@@ -38,9 +38,9 @@ const limpiarFormulario =() => {
     setBuscoServicio("");
     document.getElementById("registro").reset();
 }
- const soyProfesional = (props) => {
-  // soyProfesional === "true" && <MenuProfessional usu={usu}/>
- }
+//  const soyProfesional = (props) => {
+//   // soyProfesional === "true" && <MenuProfessional usu={usu}/>
+//  }
 
  const servicio = () =>{
    // if(soyProfesional === "true"){
@@ -74,7 +74,7 @@ const limpiarFormulario =() => {
 
         <label>seleccione</label>
         <select>
-            <option value={soyProfesional}></option>
+        {/* <option value={soyProfesional}></option> */}
             <option value={servicio}></option>
             <option value={compañia}></option>
 

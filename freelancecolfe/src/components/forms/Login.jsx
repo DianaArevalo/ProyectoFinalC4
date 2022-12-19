@@ -51,7 +51,7 @@ export const Login = () => {
         </div><br/>
         <input type="submit"  className="btn btn-primary" value="Login" onClick={ iniciarSesion }/>
         <p></p>
-        <Link to = "/crear-cuenta"><button type="submit"  className="btn btn-primary" value="Registrese" >Registrese</button></Link>
+        <Link to = "/crear-cuenta"><button type="submit"  className="btn btn-primary" value="Registrese" >¿Aun no tienes una cuenta?, ¡Registrate aqui!</button></Link>
         
     </form>
 

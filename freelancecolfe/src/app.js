@@ -9,7 +9,7 @@ export default function App(){
     return (
         <Router>
             <Routes>
-            <Route exact path="/" element={<Login/>}/>
+            <Route exact path="/Login" element={<Login/>}/>
              <Route path = "/crear-cuenta" element= {<Register/>}/>
             <Route path = "/perfil" element = {<ProfileClient/>}/>
              <Route path = "/puntaje" element = {<ScoreClient/>}/>
