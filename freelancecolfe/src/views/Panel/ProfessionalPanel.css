@@ -1,0 +1,13 @@
+.panel {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 2500;
+  }
+  
+  .value{
+      align-items: center;
+      font-size: 20px;
+      font-weight: 2500;
+  }
+  

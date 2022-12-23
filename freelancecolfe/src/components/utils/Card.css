@@ -1,0 +1,6 @@
+.card{
+    background-color: #010112;
+    display: inline-flex;
+    flex-direction: column;
+    
+}
