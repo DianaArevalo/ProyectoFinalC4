@@ -25,11 +25,11 @@ export async function createProfessional(req, res){
 
 export async function readProfessional(req, res){
     
-    const id = req.params.id
+    const Telefono = req.body.Telefono
     let documento
 
     try {
-        documento = await professionalsModel.findOne({"_id":id})
+        documento = await professionalsModel.findOne({"Telefono":Telefono})
         
     } catch (error) {
         res.status(400).json(error.message)
@@ -41,12 +41,12 @@ export async function readProfessional(req, res){
 
 export async function updateProfessional(req, res){
     
-    const id = req.params.id
+    const Telefono = req.params.Telefono
     const update = req.body.update
     let documento
 
     try {
-        documento = await professionalsModel.updateOne({"_id":id}, update, {runValidators: true})
+        documento = await professionalsModel.updateOne({"Telefono":Telefono}, update, {runValidators: true})
         
     } catch (error) {
         res.status(400).json(error.message)
@@ -59,11 +59,11 @@ export async function updateProfessional(req, res){
 
 export async function deleteProfessional(req, res){
     
-    const id = req.params.id
+    const Telefono = req.body.Telefono
     let documento
 
     try {
-        documento = await professionalsModel.deleteOne({"_id":id})
+        documento = await professionalsModel.deleteOne({"Telefono":Telefono})
         
     } catch (error) {
         res.status(400).json(error.message)
